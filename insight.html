@@ -1,0 +1,2397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSIGHT SCHOOL (INS) - Education is the Key</title>
+    <meta name="description" content="Insight School is a premier educational institution dedicated to holistic education, academic excellence, and character development.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <style>
+        :root {
+            /* Color Palette */
+            --wine: #722F37;
+            --blue: #1E3A8A;
+            --green: #2E7D32;
+            --golden-yellow: #FFC107;
+            --light-blue: #E8F4FD;
+            --light-wine: #F9F0F1;
+            --light-gray: #F8F9FA;
+            --medium-gray: #6C757D;
+            --dark-gray: #343A40;
+            --white: #FFFFFF;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--blue);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: var(--wine);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #5a2530;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: var(--blue);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: #172a68;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--blue);
+            border: 2px solid var(--blue);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--blue);
+            color: var(--white);
+        }
+
+        .btn-green {
+            background-color: var(--green);
+            color: var(--white);
+        }
+
+        .btn-green:hover {
+            background-color: #1e5c21;
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--wine), var(--blue));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--wine), var(--blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+
+        .school-name {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .school-name h1 {
+            font-size: 1.6rem;
+            color: var(--blue);
+            margin: 0;
+        }
+
+        .school-name p {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            margin: 0;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--dark-gray);
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-link:hover {
+            color: var(--wine);
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--wine);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: var(--light-gray);
+            border-radius: 4px;
+            padding: 8px 12px;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            padding: 5px;
+            width: 200px;
+            outline: none;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--blue);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(114, 47, 55, 0.85)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 160px 0 100px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .modal-header {
+            padding: 20px 30px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            color: var(--blue);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--medium-gray);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            color: var(--wine);
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-gray);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 250px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Facilities Section */
+        .facilities {
+            padding: 80px 0;
+        }
+
+        .facilities-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .facility-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .facility-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .facility-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .facility-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .facility-card:hover .facility-img img {
+            transform: scale(1.05);
+        }
+
+        .facility-content {
+            padding: 25px;
+        }
+
+        .facility-content h3 {
+            margin-bottom: 15px;
+            color: var(--wine);
+        }
+
+        /* Interactive Calendar */
+        .calendar-section {
+            padding: 80px 0;
+            background-color: var(--light-blue);
+        }
+
+        .calendar-container {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .calendar-nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        .calendar-nav-btn {
+            background-color: var(--light-gray);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .calendar-nav-btn:hover {
+            background-color: var(--blue);
+            color: white;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .calendar-day-header {
+            text-align: center;
+            font-weight: 600;
+            color: var(--blue);
+            padding: 10px;
+            background-color: var(--light-gray);
+            border-radius: 4px;
+        }
+
+        .calendar-day {
+            height: 80px;
+            border: 1px solid #eee;
+            padding: 8px;
+            border-radius: 4px;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .calendar-day:hover {
+            background-color: var(--light-wine);
+        }
+
+        .calendar-day.has-event {
+            background-color: rgba(114, 47, 55, 0.1);
+            border-color: var(--wine);
+        }
+
+        .calendar-day-number {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .calendar-event-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--green);
+            border-radius: 50%;
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+        }
+
+        /* Policy Pages */
+        .policies {
+            padding: 80px 0;
+        }
+
+        .policy-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+
+        .policy-nav-btn {
+            padding: 12px 25px;
+            background-color: var(--light-gray);
+            border: none;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .policy-nav-btn.active {
+            background-color: var(--blue);
+            color: white;
+        }
+
+        .policy-content {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .policy-page {
+            display: none;
+        }
+
+        .policy-page.active {
+            display: block;
+        }
+
+        .policy-page h3 {
+            margin-bottom: 20px;
+            color: var(--wine);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-wine);
+        }
+
+        .policy-page ul, .policy-page ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .policy-page li {
+            margin-bottom: 10px;
+        }
+
+        /* Student/Parent Portal */
+        .portal-section {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .portal-tabs {
+            display: flex;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 30px;
+        }
+
+        .portal-tab {
+            padding: 15px 30px;
+            background: none;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--medium-gray);
+            cursor: pointer;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .portal-tab.active {
+            color: var(--blue);
+        }
+
+        .portal-tab.active:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--blue);
+        }
+
+        .portal-content {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            min-height: 400px;
+        }
+
+        .portal-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .portal-dashboard {
+            display: none;
+        }
+
+        .portal-dashboard.active {
+            display: block;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .dashboard-card {
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            padding: 25px;
+            border-left: 5px solid var(--blue);
+        }
+
+        .dashboard-card h4 {
+            margin-bottom: 15px;
+            color: var(--wine);
+        }
+
+        /* Admission Portal */
+        .admission-portal {
+            padding: 80px 0;
+        }
+
+        .admission-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .admission-steps:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: #eee;
+            z-index: 1;
+        }
+
+        .step {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 25%;
+        }
+
+        .step-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            color: var(--medium-gray);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .step.active .step-icon {
+            background-color: var(--blue);
+            color: white;
+        }
+
+        .step.completed .step-icon {
+            background-color: var(--green);
+            color: white;
+        }
+
+        .admission-form-container {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
+        .form-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Quick Links */
+        .quick-links {
+            padding: 60px 0;
+            background-color: var(--light-gray);
+        }
+
+        .quick-links-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .quick-link-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .quick-link-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-link-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, var(--blue), var(--wine));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .quick-link-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--blue);
+            color: var(--white);
+            padding: 70px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--golden-yellow);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-col p, .footer-col li {
+            opacity: 0.85;
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul {
+            list-style-type: none;
+        }
+
+        .footer-col li {
+            padding: 5px 0;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--golden-yellow);
+            margin-top: 3px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background-color: var(--wine);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .admission-steps {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+            }
+            
+            .step {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu, .nav-cta {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 140px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 10px;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .quick-links-container, .facilities-container, .gallery-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .calendar-grid {
+                grid-template-columns: repeat(7, 1fr);
+                gap: 5px;
+            }
+            
+            .calendar-day {
+                height: 60px;
+                padding: 5px;
+                font-size: 0.9rem;
+            }
+            
+            .portal-tabs {
+                flex-direction: column;
+            }
+            
+            .policy-content, .portal-content, .admission-form-container {
+                padding: 25px;
+            }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 90px;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .mobile-nav-link {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-weight: 500;
+            color: var(--dark-gray);
+        }
+
+        .mobile-nav-link:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-search {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .mobile-search input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .mobile-search button {
+            background-color: var(--blue);
+            color: white;
+            border: none;
+            padding: 0 15px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        /* Image Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        
+        .lightbox-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .lightbox-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .lightbox-caption {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">INS</div>
+                <div class="school-name">
+                    <h1>INSIGHT SCHOOL</h1>
+                    <p>Education is the Key</p>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#academics" class="nav-link">Academics</a>
+                <a href="#admissions" class="nav-link">Admissions</a>
+                <a href="#facilities" class="nav-link">Facilities</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#policies" class="nav-link">Policies</a>
+                <a href="#news" class="nav-link">Calendar</a>
+            </nav>
+            
+            <div class="nav-cta">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <button class="btn btn-primary" id="loginBtn">Portal Login</button>
+                <a href="#admissionPortal" class="btn btn-secondary">Apply Now</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-search">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="mobile-nav">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#academics" class="mobile-nav-link">Academics</a>
+                <a href="#admissions" class="mobile-nav-link">Admissions</a>
+                <a href="#facilities" class="mobile-nav-link">Facilities</a>
+                <a href="#gallery" class="mobile-nav-link">Gallery</a>
+                <a href="#policies" class="mobile-nav-link">Policies</a>
+                <a href="#news" class="mobile-nav-link">Calendar</a>
+            </div>
+            <button class="btn btn-primary" id="mobileLoginBtn" style="width: 100%; margin-bottom: 10px;">Portal Login</button>
+            <a href="#admissionPortal" class="btn btn-secondary" style="width: 100%; text-align: center;">Apply Now</a>
+        </div>
+    </header>
+
+    <!-- Login/Portal Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Student & Parent Portal</h3>
+                <button class="modal-close" id="loginClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="portal-tabs">
+                    <button class="portal-tab active" data-tab="login">Login</button>
+                    <button class="portal-tab" data-tab="student">Student Dashboard</button>
+                    <button class="portal-tab" data-tab="parent">Parent Dashboard</button>
+                </div>
+                
+                <div class="portal-content">
+                    <div class="portal-form" id="loginForm">
+                        <div class="form-group">
+                            <label for="username">Username/Student ID</label>
+                            <input type="text" id="username" class="form-control" placeholder="Enter username or student ID">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" class="form-control" placeholder="Enter password">
+                        </div>
+                        <div class="form-group">
+                            <label for="userType">Login As</label>
+                            <select id="userType" class="form-control">
+                                <option value="student">Student</option>
+                                <option value="parent">Parent/Guardian</option>
+                                <option value="staff">Staff</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" style="width: 100%;" id="doLogin">Login to Portal</button>
+                        </div>
+                        <p style="text-align: center; color: var(--medium-gray); margin-top: 15px;">
+                            <a href="#" style="color: var(--blue);">Forgot password?</a> | 
+                            <a href="#" style="color: var(--blue);">First time login?</a>
+                        </p>
+                    </div>
+                    
+                    <div class="portal-dashboard" id="studentDashboard">
+                        <h3>Student Dashboard</h3>
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card">
+                                <h4>Academic Results</h4>
+                                <p>View your termly results and report cards</p>
+                                <button class="btn btn-outline" style="margin-top: 10px;">View Results</button>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>Class Schedule</h4>
+                                <p>Check your daily class timetable</p>
+                                <button class="btn btn-outline" style="margin-top: 10px;">View Schedule</button>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>Assignment Submissions</h4>
+                                <p>Submit and track your assignments</p>
+                                <button class="btn btn-outline" style="margin-top: 10px;">Go to Assignments</button>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>Payment Records</h4>
+                                <p>View tuition and fee payment history</p>
+                                <button class="btn btn-outline" style="margin-top: 10px;">View Payments</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portal-dashboard" id="parentDashboard">
+                        <h3>Parent Dashboard</h3>
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card">
+                                <h4>Child's Performance</h4>
+                                <p>Monitor academic progress and reports</p>
+                                <button class="btn btn-outline" style="margin-top: 10px;">View Reports</button>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>Fee Payments</h4>
+                                <p>Make payments and view statements</p>
+                                <button class="btn btn-outline" style="margin-top: 10px;">Pay Fees</button>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>Attendance</h4>
+                                <p>Check your child's attendance record</p>
+                                <button class="btn btn-outline" style="margin-top: 10px;">View Attendance</button>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>PTA Communications</h4>
+                                <p>Messages and announcements from school</p>
+                                <button class="btn btn-outline" style="margin-top: 10px;">View Messages</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Welcome to Insight School</h1>
+            <p>Where we inspire and empower learners to reach their full potential, fostering a culture of innovation, integrity, and excellence.</p>
+            <div class="hero-btns">
+                <a href="#admissionPortal" class="btn btn-primary">Start Application</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+                <button class="btn btn-outline" id="portalBtn">Student/Parent Portal</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="quick-links">
+        <div class="container quick-links-container">
+            <div class="quick-link-card">
+                <div class="quick-link-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Academics</h3>
+                <p>Excellence in education across all levels from Preparatory to Senior Secondary.</p>
+                <a href="#academics" class="btn btn-outline" style="margin-top: 15px;">Explore</a>
+            </div>
+            
+            <div class="quick-link-card">
+                <div class="quick-link-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>School Calendar</h3>
+                <p>Stay updated with important dates, events, and academic schedules.</p>
+                <a href="#calendar" class="btn btn-outline" style="margin-top: 15px;">View Calendar</a>
+            </div>
+            
+            <div class="quick-link-card">
+                <div class="quick-link-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h3>Admissions</h3>
+                <p>Begin your journey with Insight School. Apply online today.</p>
+                <a href="#admissionPortal" class="btn btn-outline" style="margin-top: 15px;">Apply Now</a>
+            </div>
+            
+            <div class="quick-link-card">
+                <div class="quick-link-icon">
+                    <i class="fas fa-images"></i>
+                </div>
+                <h3>Photo Gallery</h3>
+                <p>Explore our campus, facilities, and student life through photos.</p>
+                <a href="#gallery" class="btn btn-outline" style="margin-top: 15px;">View Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="facilities" id="facilities">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Facilities</h2>
+            </div>
+            
+            <div class="facilities-container">
+                <div class="facility-card">
+                    <div class="facility-img">
+                        <img src="LIBRARY.jpeg" alt="School Library">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Modern Library</h3>
+                        <p>Our well-stocked library provides a quiet space for study and research with a wide collection of books, digital resources, and reading areas.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-img">
+                        <img src="lab.jpeg" alt="Science Laboratory">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Science Laboratories</h3>
+                        <p>Fully equipped laboratories for Physics, Chemistry, and Biology with modern equipment for practical learning and experiments.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-img">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sports Facilities">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Sports Facilities</h3>
+                        <p>Basketball court, football field, athletics track, and indoor sports facilities to promote physical fitness and sportsmanship.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-img">
+                        <img src="computer.jpeg" alt="Computer Lab">
+                    </div>
+                    <div class="facility-content">
+                        <h3>ICT Laboratories</h3>
+                        <p>Modern computer labs with high-speed internet, updated software, and digital learning tools for 21st century education.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-img">
+                        <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="School Clinic">
+                    </div>
+                    <div class="facility-content">
+                        <h3>School Clinic</h3>
+                        <p>Fully equipped health bay with qualified nurse on duty to attend to students' medical needs during school hours.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-img">
+                        <img src="com12.jpeg" alt="Classrooms">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Modern Classrooms</h3>
+                        <p>Spacious, well-ventilated classrooms with smart boards, comfortable furniture, and conducive learning environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Photo Gallery</h2>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-item" data-image="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" data-caption="INSIGHT SCHOOL Main Building">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="School Building">
+                    <div class="gallery-overlay">
+                        <h4>Main Building</h4>
+                        <p>The iconic main building of Insight School</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-image="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" data-caption="Modern Classroom with Smart Board">
+                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Classroom">
+                    <div class="gallery-overlay">
+                        <h4>Classroom</h4>
+                        <p>Modern classroom with interactive smart board</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-image="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" data-caption="Science Laboratory Experiment">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Science Lab">
+                    <div class="gallery-overlay">
+                        <h4>Science Lab</h4>
+                        <p>Students conducting experiments in chemistry lab</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-image="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" data-caption="Sports Day Activities">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Sports">
+                    <div class="gallery-overlay">
+                        <h4>Sports Day</h4>
+                        <p>Annual sports competition among houses</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-image="https://images.unsplash.com/photo-1524178234883-043d5c3f3cf4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" data-caption="Graduation Ceremony">
+                    <img src="https://images.unsplash.com/photo-1524178234883-043d5c3f3cf4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Graduation">
+                    <div class="gallery-overlay">
+                        <h4>Graduation</h4>
+                        <p>Annual graduation ceremony for graduating students</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-image="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" data-caption="School Library Reading Area">
+                    <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Library">
+                    <div class="gallery-overlay">
+                        <h4>Library</h4>
+                        <p>Students studying in the school library</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Calendar -->
+    <section class="calendar-section" id="calendar">
+        <div class="container">
+            <div class="section-title">
+                <h2>School Calendar</h2>
+            </div>
+            
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <h3 id="calendarMonth">December 2025</h3>
+                    <div class="calendar-nav">
+                        <button class="calendar-nav-btn" id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                        <button class="calendar-nav-btn" id="todayBtn">Today</button>
+                        <button class="calendar-nav-btn" id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Calendar will be generated by JavaScript -->
+                </div>
+                
+                <div class="calendar-events-list">
+                    <h4 style="margin-bottom: 15px;">Upcoming Events</h4>
+                    <div class="calendar-event">
+                        <div class="event-date">
+                            <div class="event-date-day">12</div>
+                            <div class="event-date-month">Dec</div>
+                        </div>
+                        <div class="event-details">
+                            <h4>First Term Vacation</h4>
+                            <p>School closes for the first term break.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-event">
+                        <div class="event-date">
+                            <div class="event-date-day">5</div>
+                            <div class="event-date-month">Jan</div>
+                        </div>
+                        <div class="event-details">
+                            <h4>Resumption Date</h4>
+                            <p>School resumes for the second term.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-event">
+                        <div class="event-date">
+                            <div class="event-date-day">30</div>
+                            <div class="event-date-month">Jan</div>
+                        </div>
+                        <div class="event-details">
+                            <h4>World NTD Day</h4>
+                            <p>Observance of World Neglected Tropical Diseases Day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policy Pages -->
+    <section class="policies" id="policies">
+        <div class="container">
+            <div class="section-title">
+                <h2>School Policies</h2>
+            </div>
+            
+            <div class="policy-nav">
+                <button class="policy-nav-btn active" data-policy="discipline">Discipline Policy</button>
+                <button class="policy-nav-btn" data-policy="attendance">Attendance Policy</button>
+                <button class="policy-nav-btn" data-policy="ict">ICT Policy</button>
+                <button class="policy-nav-btn" data-policy="examination">Examination Policy</button>
+            </div>
+            
+            <div class="policy-content">
+                <div class="policy-page active" id="disciplinePolicy">
+                    <h3>Discipline Policy</h3>
+                    <p>Insight School maintains a disciplined environment conducive to learning and personal development. Our discipline policy is based on respect, responsibility, and restoration.</p>
+                    
+                    <h4>Code of Conduct</h4>
+                    <ul>
+                        <li>All students must show respect to teachers, staff, and fellow students</li>
+                        <li>Uniform must be worn correctly and completely at all times</li>
+                        <li>Punctuality to school and classes is mandatory</li>
+                        <li>Electronic devices are only permitted for educational purposes with teacher approval</li>
+                        <li>Bullying, harassment, or violence of any kind will not be tolerated</li>
+                    </ul>
+                    
+                    <h4>Disciplinary Procedures</h4>
+                    <ol>
+                        <li>Verbal warning for minor infractions</li>
+                        <li>Written warning and parent notification</li>
+                        <li>Meeting with parents/guardians</li>
+                        <li>Internal suspension for serious offenses</li>
+                        <li>Recommendation for expulsion for repeated or severe violations</li>
+                    </ol>
+                </div>
+                
+                <div class="policy-page" id="attendancePolicy">
+                    <h3>Attendance Policy</h3>
+                    <p>Regular attendance is essential for academic success. Insight School expects all students to maintain excellent attendance records.</p>
+                    
+                    <h4>Attendance Requirements</h4>
+                    <ul>
+                        <li>Students must arrive by 7:30 AM each school day</li>
+                        <li>Morning assembly is compulsory for all students</li>
+                        <li>Attendance is taken at the beginning of each class period</li>
+                        <li>A minimum of 80% attendance is required to sit for termly examinations</li>
+                    </ul>
+                    
+                    <h4>Absence Procedures</h4>
+                    <ol>
+                        <li>Parents must notify the school by phone or written note for any absence</li>
+                        <li>Medical certificates are required for absences exceeding 3 days</li>
+                        <li>Make-up work is the student's responsibility for missed classes</li>
+                        <li>Excessive absences will result in parent conference and possible retention</li>
+                    </ol>
+                </div>
+                
+                <div class="policy-page" id="ictPolicy">
+                    <h3>ICT Policy</h3>
+                    <p>Insight School provides technology resources to enhance learning while ensuring safe and responsible use.</p>
+                    
+                    <h4>Acceptable Use Policy</h4>
+                    <ul>
+                        <li>School computers and networks are for educational purposes only</li>
+                        <li>Students must not attempt to bypass security or access restricted content</li>
+                        <li>Personal devices may only be used with teacher permission during designated times</li>
+                        <li>All users must respect copyright and intellectual property rights</li>
+                        <li>Cyberbullying or inappropriate online behavior is strictly prohibited</li>
+                    </ul>
+                    
+                    <h4>Digital Citizenship</h4>
+                    <ol>
+                        <li>Use appropriate language in all digital communications</li>
+                        <li>Protect personal information and passwords</li>
+                        <li>Cite sources properly when using online materials</li>
+                        <li>Report any security concerns or inappropriate content to teachers immediately</li>
+                    </ol>
+                </div>
+                
+                <div class="policy-page" id="examinationPolicy">
+                    <h3>Examination Policy</h3>
+                    <p>Insight School maintains rigorous academic standards through fair and transparent examination procedures.</p>
+                    
+                    <h4>Examination Rules</h4>
+                    <ul>
+                        <li>Students must arrive at least 15 minutes before examination start time</li>
+                        <li>Only permitted materials may be brought into the examination hall</li>
+                        <li>Communication between students during examinations is prohibited</li>
+                        <li>Electronic devices must be switched off and placed in bags</li>
+                        <li>Any form of academic dishonesty will result in serious consequences</li>
+                    </ul>
+                    
+                    <h4>Grading System</h4>
+                    <ol>
+                        <li>Continuous Assessment: 40% (Tests, assignments, projects, class participation)</li>
+                        <li>Termly Examinations: 60%</li>
+                        <li>Grading Scale: A (70-100%), B (60-69%), C (50-59%), D (45-49%), E (40-44%), F (Below 40%)</li>
+                        <li>Promotion requires a minimum average of 50% across all subjects</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Portal -->
+    <section class="admission-portal" id="admissionPortal">
+        <div class="container">
+            <div class="section-title">
+                <h2>Online Admission Portal</h2>
+            </div>
+            
+            <div class="admission-steps">
+                <div class="step active" id="step1">
+                    <div class="step-icon">1</div>
+                    <p>Personal Details</p>
+                </div>
+                <div class="step" id="step2">
+                    <div class="step-icon">2</div>
+                    <p>Academic Information</p>
+                </div>
+                <div class="step" id="step3">
+                    <div class="step-icon">3</div>
+                    <p>Documents Upload</p>
+                </div>
+                <div class="step" id="step4">
+                    <div class="step-icon">4</div>
+                    <p>Review & Submit</p>
+                </div>
+            </div>
+            
+            <div class="admission-form-container">
+                <form id="admissionForm">
+                    <div class="form-step active" id="formStep1">
+                        <h3>Student Personal Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="middleName">Middle Name</label>
+                                <input type="text" id="middleName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender *</label>
+                                <select id="gender" class="form-control" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dob">Date of Birth *</label>
+                                <input type="date" id="dob" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="classApplying">Class Applying For *</label>
+                                <select id="classApplying" class="form-control" required>
+                                    <option value="">Select Class</option>
+                                    <option value="preparatory">Preparatory Class</option>
+                                    <option value="kindergarten">Kindergarten</option>
+                                    <option value="nursery">Nursery</option>
+                                    <option value="primary1">Primary 1</option>
+                                    <option value="primary2">Primary 2</option>
+                                    <option value="primary3">Primary 3</option>
+                                    <option value="primary4">Primary 4</option>
+                                    <option value="primary5">Primary 5</option>
+                                    <option value="primary6">Primary 6</option>
+                                    <option value="jss1">JSS 1</option>
+                                    <option value="jss2">JSS 2</option>
+                                    <option value="jss3">JSS 3</option>
+                                    <option value="sss1">SSS 1</option>
+                                    <option value="sss2">SSS 2</option>
+                                    <option value="sss3">SSS 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-step" id="formStep2">
+                        <h3>Academic Information</h3>
+                        <div class="form-group">
+                            <label for="previousSchool">Previous School Attended</label>
+                            <input type="text" id="previousSchool" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastClass">Last Class Completed</label>
+                            <input type="text" id="lastClass" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="academicInterests">Academic Interests / Proposed Subjects (SSS Only)</label>
+                            <textarea id="academicInterests" class="form-control" rows="3" placeholder="E.g. Sciences, Arts, Commercial"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-step" id="formStep3">
+                        <h3>Required Documents</h3>
+                        <p>Please upload scanned copies of the following documents:</p>
+                        
+                        <div class="form-group">
+                            <label for="birthCertificate">Birth Certificate *</label>
+                            <input type="file" id="birthCertificate" class="form-control" accept=".pdf,.jpg,.png" required>
+                            <small>PDF, JPG or PNG format (Max 2MB)</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="passportPhoto">Recent Passport Photograph *</label>
+                            <input type="file" id="passportPhoto" class="form-control" accept=".jpg,.png" required>
+                            <small>White background, JPG or PNG (Max 1MB)</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastReportCard">Last School Report Card</label>
+                            <input type="file" id="lastReportCard" class="form-control" accept=".pdf,.jpg,.png">
+                            <small>For applicants transferring from other schools</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="medicalReport">Medical Report</label>
+                            <input type="file" id="medicalReport" class="form-control" accept=".pdf,.jpg,.png">
+                            <small>Optional but recommended</small>
+                        </div>
+                    </div>
+                    
+                    <div class="form-step" id="formStep4">
+                        <h3>Review & Submit Application</h3>
+                        
+                        <div class="form-group">
+                            <div style="background-color: var(--light-gray); padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                                <h4>Application Summary</h4>
+                                <p id="applicationSummary">Please complete all previous steps to view summary.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="parentName">Parent/Guardian Full Name *</label>
+                            <input type="text" id="parentName" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="parentEmail">Parent/Guardian Email *</label>
+                            <input type="email" id="parentEmail" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="parentPhone">Parent/Guardian Phone *</label>
+                            <input type="tel" id="parentPhone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="checkbox" id="termsAgree" required>
+                            <label for="termsAgree">I agree to the terms and conditions and confirm that all information provided is accurate *</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-outline" id="prevBtn">Previous</button>
+                        <button type="button" class="btn btn-secondary" id="nextBtn">Next Step</button>
+                        <button type="submit" class="btn btn-primary" id="submitBtn" style="display: none;">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox for Gallery -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <div class="lightbox-nav">
+                <button class="lightbox-btn" id="prevImage"><i class="fas fa-chevron-left"></i></button>
+                <button class="lightbox-btn" id="nextImage"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <img class="lightbox-img" id="lightboxImage" src="" alt="">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>INSIGHT SCHOOL</h3>
+                    <p><em>"Education is the Key"</em></p>
+                    <p>Insight School is dedicated to providing transformative education that inspires students to excel academically, lead with integrity, and innovate for a brighter future.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>IKANGBA ROAD, BESIDE DEEPER LIFE BIBLE CHURCH, ADJACENT OLORUNSOGO JUNCTION, IKANGBA, IJEBU-ODE</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>07012587242, 07017411321, 08168115719, 08162930640</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>insightrschools@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#academics">Academics</a></li>
+                        <li><a href="#admissionPortal">Admissions</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                        <li><a href="#calendar">Calendar</a></li>
+                        <li><a href="#policies">Policies</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><button id="footerLoginBtn" style="background: none; border: none; color: inherit; padding: 0; text-align: left; cursor: pointer;">Student/Parent Portal</button></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>School Hours</h3>
+                    <ul>
+                        <li>Monday - Friday: 7:30 AM - 3:00 PM</li>
+                        <li>Saturday: 9:00 AM - 1:00 PM (Clubs & Activities)</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                    
+                    <div style="margin-top: 20px;">
+                        <h3>Official Colors</h3>
+                        <div style="display: flex; gap: 10px; margin-top: 10px;">
+                            <div style="width: 25px; height: 25px; background-color: var(--wine); border-radius: 4px;"></div>
+                            <div style="width: 25px; height: 25px; background-color: var(--blue); border-radius: 4px;"></div>
+                            <div style="width: 25px; height: 25px; background-color: var(--green); border-radius: 4px;"></div>
+                            <div style="width: 25px; height: 25px; background-color: var(--golden-yellow); border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Insight School (INS). All Rights Reserved. | Designed for Excellence in Education</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mobileMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu after clicking
+                    if (window.innerWidth <= 768) {
+                        mobileMenu.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+        
+        // Sticky header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+        
+        // Login Modal Functionality
+        const loginBtn = document.getElementById('loginBtn');
+        const mobileLoginBtn = document.getElementById('mobileLoginBtn');
+        const footerLoginBtn = document.getElementById('footerLoginBtn');
+        const portalBtn = document.getElementById('portalBtn');
+        const loginModal = document.getElementById('loginModal');
+        const loginClose = document.getElementById('loginClose');
+        
+        const openLoginModal = () => {
+            loginModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+        
+        const closeLoginModal = () => {
+            loginModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+        
+        loginBtn.addEventListener('click', openLoginModal);
+        mobileLoginBtn.addEventListener('click', openLoginModal);
+        footerLoginBtn.addEventListener('click', openLoginModal);
+        portalBtn.addEventListener('click', openLoginModal);
+        loginClose.addEventListener('click', closeLoginModal);
+        
+        // Close modal when clicking outside
+        loginModal.addEventListener('click', (e) => {
+            if (e.target === loginModal) {
+                closeLoginModal();
+            }
+        });
+        
+        // Portal Tabs
+        const portalTabs = document.querySelectorAll('.portal-tab');
+        const portalForms = {
+            login: document.getElementById('loginForm'),
+            student: document.getElementById('studentDashboard'),
+            parent: document.getElementById('parentDashboard')
+        };
+        
+        portalTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.getAttribute('data-tab');
+                
+                // Update active tab
+                portalTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Show corresponding content
+                Object.keys(portalForms).forEach(key => {
+                    if (key === tabId) {
+                        portalForms[key].style.display = 'block';
+                    } else {
+                        portalForms[key].style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Login functionality
+        const doLogin = document.getElementById('doLogin');
+        doLogin.addEventListener('click', () => {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const userType = document.getElementById('userType').value;
+            
+            if (username && password) {
+                // Simulate login
+                alert(`Welcome ${username}! You are now logged in as a ${userType}.`);
+                
+                // Switch to appropriate dashboard
+                portalTabs.forEach(t => t.classList.remove('active'));
+                document.querySelector(`.portal-tab[data-tab="${userType}"]`).classList.add('active');
+                
+                Object.keys(portalForms).forEach(key => {
+                    if (key === userType) {
+                        portalForms[key].style.display = 'block';
+                    } else {
+                        portalForms[key].style.display = 'none';
+                    }
+                });
+            } else {
+                alert('Please enter username and password.');
+            }
+        });
+        
+        // Interactive Calendar
+        const calendarMonth = document.getElementById('calendarMonth');
+        const calendarGrid = document.getElementById('calendarGrid');
+        const prevMonthBtn = document.getElementById('prevMonth');
+        const nextMonthBtn = document.getElementById('nextMonth');
+        const todayBtn = document.getElementById('todayBtn');
+        
+        let currentDate = new Date(2025, 11, 1); // December 2025
+        
+        const schoolEvents = {
+            '2025-12-12': 'First Term Vacation',
+            '2026-01-05': 'Resumption Date',
+            '2026-01-30': 'World NTD Day',
+            '2026-02-19': 'Mid-term Break Begins',
+            '2026-02-20': 'Mid-term Break Ends',
+            '2026-02-27': 'Cultural Day',
+            '2026-03-20': 'Eid-el-Fitri',
+            '2026-03-21': 'Eid-el-Fitri',
+            '2026-04-03': 'Second Term Ends'
+        };
+        
+        function renderCalendar() {
+            // Clear previous calendar
+            calendarGrid.innerHTML = '';
+            
+            // Set month and year header
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"];
+            calendarMonth.textContent = `${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
+            
+            // Add day headers
+            const dayHeaders = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            dayHeaders.forEach(day => {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day-header';
+                dayElement.textContent = day;
+                calendarGrid.appendChild(dayElement);
+            });
+            
+            // Get first day of month and total days
+            const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+            const lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+            const totalDays = lastDay.getDate();
+            const startingDay = firstDay.getDay();
+            
+            // Add empty cells for days before the first day of the month
+            for (let i = 0; i < startingDay; i++) {
+                const emptyDay = document.createElement('div');
+                emptyDay.className = 'calendar-day';
+                calendarGrid.appendChild(emptyDay);
+            }
+            
+            // Add days of the month
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            
+            for (let day = 1; day <= totalDays; day++) {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day';
+                dayElement.innerHTML = `<div class="calendar-day-number">${day}</div>`;
+                
+                // Check if today
+                const cellDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+                if (cellDate.getTime() === today.getTime()) {
+                    dayElement.style.backgroundColor = 'rgba(30, 58, 138, 0.1)';
+                    dayElement.style.borderColor = 'var(--blue)';
+                }
+                
+                // Check if has event
+                const dateString = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                if (schoolEvents[dateString]) {
+                    dayElement.classList.add('has-event');
+                    dayElement.innerHTML += `<div class="calendar-event-dot"></div>`;
+                    
+                    // Add event details on hover
+                    dayElement.title = schoolEvents[dateString];
+                }
+                
+                // Add click event to view event details
+                dayElement.addEventListener('click', () => {
+                    if (schoolEvents[dateString]) {
+                        alert(`Event on ${dateString}: ${schoolEvents[dateString]}`);
+                    }
+                });
+                
+                calendarGrid.appendChild(dayElement);
+            }
+        }
+        
+        // Initialize calendar
+        renderCalendar();
+        
+        // Calendar navigation
+        prevMonthBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar();
+        });
+        
+        nextMonthBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar();
+        });
+        
+        todayBtn.addEventListener('click', () => {
+            currentDate = new Date();
+            currentDate.setDate(1);
+            renderCalendar();
+        });
+        
+        // Policy Navigation
+        const policyNavBtns = document.querySelectorAll('.policy-nav-btn');
+        const policyPages = document.querySelectorAll('.policy-page');
+        
+        policyNavBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const policyId = btn.getAttribute('data-policy');
+                
+                // Update active button
+                policyNavBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Show corresponding policy page
+                policyPages.forEach(page => {
+                    if (page.id === `${policyId}Policy`) {
+                        page.classList.add('active');
+                    } else {
+                        page.classList.remove('active');
+                    }
+                });
+            });
+        });
+        
+        // Gallery Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        const prevImageBtn = document.getElementById('prevImage');
+        const nextImageBtn = document.getElementById('nextImage');
+        
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        let currentImageIndex = 0;
+        
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                const imageUrl = item.getAttribute('data-image');
+                const caption = item.getAttribute('data-caption');
+                
+                lightboxImage.src = imageUrl;
+                lightboxCaption.textContent = caption;
+                currentImageIndex = index;
+                
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        function showImage(index) {
+            if (index < 0) index = galleryItems.length - 1;
+            if (index >= galleryItems.length) index = 0;
+            
+            currentImageIndex = index;
+            const item = galleryItems[currentImageIndex];
+            const imageUrl = item.getAttribute('data-image');
+            const caption = item.getAttribute('data-caption');
+            
+            lightboxImage.src = imageUrl;
+            lightboxCaption.textContent = caption;
+        }
+        
+        prevImageBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showImage(currentImageIndex - 1);
+        });
+        
+        nextImageBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showImage(currentImageIndex + 1);
+        });
+        
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                } else if (e.key === 'ArrowLeft') {
+                    showImage(currentImageIndex - 1);
+                } else if (e.key === 'ArrowRight') {
+                    showImage(currentImageIndex + 1);
+                }
+            }
+        });
+        
+        // Admission Form Multi-step
+        const steps = document.querySelectorAll('.step');
+        const formSteps = document.querySelectorAll('.form-step');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        const admissionForm = document.getElementById('admissionForm');
+        const applicationSummary = document.getElementById('applicationSummary');
+        
+        let currentStep = 0;
+        
+        function updateFormSteps() {
+            // Update steps UI
+            steps.forEach((step, index) => {
+                if (index === currentStep) {
+                    step.classList.add('active');
+                    step.classList.remove('completed');
+                } else if (index < currentStep) {
+                    step.classList.remove('active');
+                    step.classList.add('completed');
+                } else {
+                    step.classList.remove('active');
+                    step.classList.remove('completed');
+                }
+            });
+            
+            // Update form steps
+            formSteps.forEach((step, index) => {
+                if (index === currentStep) {
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active');
+                }
+            });
+            
+            // Update buttons
+            if (currentStep === 0) {
+                prevBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'inline-block';
+            }
+            
+            if (currentStep === formSteps.length - 1) {
+                nextBtn.style.display = 'none';
+                submitBtn.style.display = 'inline-block';
+                updateApplicationSummary();
+            } else {
+                nextBtn.style.display = 'inline-block';
+                submitBtn.style.display = 'none';
+            }
+        }
+        
+        function updateApplicationSummary() {
+            const firstName = document.getElementById('firstName').value || 'Not provided';
+            const lastName = document.getElementById('lastName').value || 'Not provided';
+            const classApplying = document.getElementById('classApplying').value || 'Not selected';
+            const parentName = document.getElementById('parentName').value || 'Not provided';
+            const parentEmail = document.getElementById('parentEmail').value || 'Not provided';
+            
+            const summary = `
+                <strong>Student Name:</strong> ${firstName} ${lastName}<br>
+                <strong>Class Applying For:</strong> ${classApplying}<br>
+                <strong>Parent/Guardian:</strong> ${parentName}<br>
+                <strong>Contact Email:</strong> ${parentEmail}<br><br>
+                Please review all information before submitting. You will receive a confirmation email after submission.
+            `;
+            
+            applicationSummary.innerHTML = summary;
+        }
+        
+        nextBtn.addEventListener('click', () => {
+            // Validate current step before proceeding
+            let isValid = true;
+            const currentFormStep = formSteps[currentStep];
+            const requiredInputs = currentFormStep.querySelectorAll('[required]');
+            
+            requiredInputs.forEach(input => {
+                if (!input.value) {
+                    isValid = false;
+                    input.style.borderColor = 'red';
+                } else {
+                    input.style.borderColor = '#ddd';
+                }
+            });
+            
+            if (isValid) {
+                currentStep++;
+                updateFormSteps();
+                
+                // Scroll to top of form
+                document.querySelector('.admission-form-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                alert('Please fill in all required fields before proceeding.');
+            }
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            currentStep--;
+            updateFormSteps();
+            
+            // Scroll to top of form
+            document.querySelector('.admission-form-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        
+        // Form submission
+        admissionForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                classApplying: document.getElementById('classApplying').value,
+                parentName: document.getElementById('parentName').value,
+                parentEmail: document.getElementById('parentEmail').value
+            };
+            
+            // In a real application, this would be sent to a server
+            // For demo purposes, we'll just show a success message
+            alert(`Application submitted successfully!\n\nA confirmation has been sent to ${formData.parentEmail}\n\nYour application reference number: INS-${Date.now().toString().substr(-6)}`);
+            
+            // Reset form (in a real app, you might redirect to a confirmation page)
+            admissionForm.reset();
+            currentStep = 0;
+            updateFormSteps();
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Initialize form steps
+        updateFormSteps();
+    </script>
+</body>
+</html>
